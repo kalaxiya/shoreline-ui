@@ -3,11 +3,12 @@ my react component .
 
 ## Usage
 
-## TODO
+## Todo
 
 - Draggable
 - Slider
 - CheckBox
+- Radio
 - Icon
 - Tab
 - DropDown
