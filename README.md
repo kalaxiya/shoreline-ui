@@ -3,6 +3,13 @@ my react component .
 
 ## Usage
 
-### <Slider />
+## TODO
 
-### <Draggable />
+- Draggable
+- Slider
+- CheckBox
+- Icon
+- Tab
+- DropDown
+- Sortable
+- Resizeable
