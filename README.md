@@ -5,10 +5,10 @@ my react component .
 
 ## Todo
 
-- ~~ Draggable ~~
-- ~~ Slider ~~
-- ~~ CheckBox ~~
-- ~~ Icon ~~
+- ~~Draggable~~
+- ~~Slider~~
+- ~~CheckBox~~
+- ~~Icon~~
 - Tab
 - DropDown
 - Sortable
