@@ -5,12 +5,12 @@ my react component .
 
 ## Todo
 
-- Draggable
-- Slider
-- CheckBox
-- Radio
-- Icon
+- ~~ Draggable ~~
+- ~~ Slider ~~
+- ~~ CheckBox ~~
+- ~~ Icon ~~
 - Tab
 - DropDown
 - Sortable
+- Radio
 - Resizeable
