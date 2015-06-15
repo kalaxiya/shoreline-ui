@@ -1,4 +1,4 @@
-# react-shoreline-ui
+# shoreline-ui
 my react component .
 
 ## Usage
