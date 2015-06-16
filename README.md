@@ -9,7 +9,9 @@ my react component .
 - ~~Slider~~
 - ~~CheckBox~~
 - ~~Icon~~
-- Tab
+- ~~Tab~~
+- ~~Toggle~~
+- ~~Paper~~
 - DropDown
 - Sortable
 - Radio
