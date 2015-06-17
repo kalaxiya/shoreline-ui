@@ -12,7 +12,7 @@ my react component .
 - ~~Tab~~
 - ~~Toggle~~
 - ~~Paper~~
-- DropDown
+- ~~DropDown~~
 - Sortable
 - Radio
 - Resizeable
