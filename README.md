@@ -13,6 +13,10 @@ my react component .
 - ~~Toggle~~
 - ~~Paper~~
 - ~~DropDown~~
-- Sortable
+- Snackbar
+- TextField
+- Button
+- Modal
 - Radio
+- Sortable
 - Resizeable
