@@ -1,0 +1,11 @@
+# Site settings
+title: LIN.
+email: pigsrule@qq.com
+description: my github page.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://linzerui.github.com" # the base hostname & protocol for your site
+github_username:  linzerui
+
+# Build settings
+markdown: kramdown
+permalink: none
