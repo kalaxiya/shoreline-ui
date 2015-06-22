@@ -18,8 +18,7 @@ After that you'll find all the components in the /src folder.
 
 You can use shoreline-ui like this:
 
-    // MyApp.js
-    
+    ```javascript
     var React = require( "./react" ),
         sui = require( "./shoreline-ui" );
     
@@ -58,6 +57,7 @@ You can use shoreline-ui like this:
     }
     
     module.exports = MyApp;
+    ```
     
 ## Customization
 
@@ -69,8 +69,10 @@ Maybe you want to change the theme built-in then you can pass a `themeColor` pro
 
 That is:
 
+    ```javascript
     <Slider style={{width: 200, margin: "0 auto"}} />
     <DropDown themeColor="#FEADBE" />
+    ```
     
 With `themeColor`, components can only receive `hex` value currently. `rgb` and `rgba` will coming soon. :)
 
