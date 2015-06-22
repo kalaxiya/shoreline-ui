@@ -1,0 +1,28 @@
+{
+  "name": "shoreline-ui",
+  "version": "0.0.2",
+  "description": "a collection of react component",
+  "main": "./src",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/linzerui/shoreline-ui.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "linzerui",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/linzerui/shoreline-ui/issues"
+  },
+  "homepage": "https://github.com/linzerui/shoreline-ui",
+  "dependencies": {
+    "object-assign": "^3.0.0"
+  }
+}
