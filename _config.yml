@@ -3,7 +3,7 @@ title: Shoreline UI.
 email: pigsrule@qq.com
 description: React components.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://linzerui.github.com" # the base hostname & protocol for your site
+url: "http://linzerui.github.io/shoreline-ui/" # the base hostname & protocol for your site
 github_username:  linzerui
 
 # Build settings
