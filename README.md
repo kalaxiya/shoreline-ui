@@ -80,6 +80,10 @@ That is:
     
 With `themeColor`, components can only receive `hex` value currently. `rgb` and `rgba` will coming soon. :)
 
+## Todo
+
+Add more components and `Material Design` style.
+
 
 ## License
 

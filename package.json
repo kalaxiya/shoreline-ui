@@ -1,6 +1,6 @@
 {
   "name": "shoreline-ui",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "a collection of react component",
   "main": "./src",
   "directories": {
