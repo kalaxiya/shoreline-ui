@@ -5,11 +5,15 @@
 'use strict';
 
 module.exports = function( hex, opacity ) {
-    if ( hex.indexOf( '#' ) !== 0 ) {
-        return hex;
+    if ( /rgb\(.+\)/.test( hex ) ) {
+        if ( typeof opacity === 'number' && opacity >=0 && opacity <= 1 ) {
+            return hex.replace( 'rgb', 'rgba' ).replace( ')', ', ' + opacity + ')' );
+        } else {
+            return hex;
+        }
     }
 
-    // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
+    // Expand shorthand form (e.g. '03F') to full form (e.g. '0033FF')
     var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
     hex = hex.replace( shorthandRegex, function( m, r, g, b ) {
         return r + r + g + g + b + b;

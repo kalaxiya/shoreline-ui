@@ -2,10 +2,10 @@
  * Created by linzerui on 15/6/17.
  */
 
-"use strict";
+'use strict';
 
-var React = require( "react" );
-var mergeAndPrefix = require( "./functions/mergeAndPrefix" );
+var React = require( 'react' );
+var mergeAndPrefix = require( './functions/mergeAndPrefix' );
 
 class DropDownItem extends React.Component {
     _handleClick() {
@@ -20,7 +20,7 @@ class DropDownItem extends React.Component {
         var props = this.props;
 
         var style = {
-            padding: "0 30px"
+            padding: '0 30px'
         };
 
         return (

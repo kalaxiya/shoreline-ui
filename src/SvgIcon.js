@@ -2,10 +2,10 @@
  * Created by linzerui on 15/6/13.
  */
 
-"use strict";
+'use strict';
 
-var React = require( "react" );
-var assign = require( "object-assign" );
+var React = require( 'react' );
+var assign = require( 'object-assign' );
 
 class SvgIcon extends React.Component {
     constructor( props ) {
@@ -14,10 +14,10 @@ class SvgIcon extends React.Component {
 
     getStyle() {
         return {
-            display: "inline-block",
+            display: 'inline-block',
             width: 24,
             height: 24,
-            userSelect: "none"
+            userSelect: 'none'
         };
     }
 

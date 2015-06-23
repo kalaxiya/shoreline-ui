@@ -15,10 +15,10 @@
  * </Draggable>
  */
 
-"use strict";
+'use strict';
 
-var React = require( "react" );
-var assign = require( "object-assign" );
+var React = require( 'react' );
+var assign = require( 'object-assign' );
 
 var emptyFunction = function() {};
 
@@ -41,9 +41,9 @@ class Draggable extends React.Component {
 
     getStyle() {
         return {
-            userSelect: "none",
-            position: "absolute",
-            cursor: "move"
+            userSelect: 'none',
+            position: 'absolute',
+            cursor: 'move'
         }
     }
 
@@ -58,8 +58,8 @@ class Draggable extends React.Component {
             _y: e.clientY - node.offsetTop
         });
 
-        window.addEventListener( "mousemove", this._bindHandleDrag, false );
-        window.addEventListener( "mouseup", this._bindHandleEnd, false );
+        window.addEventListener( 'mousemove', this._bindHandleDrag, false );
+        window.addEventListener( 'mouseup', this._bindHandleEnd, false );
     }
 
     _handleDrag( e ) {
@@ -70,10 +70,10 @@ class Draggable extends React.Component {
             newState = {};
 
         //calculate the position ( `px` )
-        if ( props.axis === "both" || props.axis === "x" ) {
+        if ( props.axis === 'both' || props.axis === 'x' ) {
             newState.left = e.clientX - state._x;
         }
-        if ( props.axis === "both" || props.axis === "y" ) {
+        if ( props.axis === 'both' || props.axis === 'y' ) {
             newState.top = e.clientY - state._y;
         }
 
@@ -81,11 +81,11 @@ class Draggable extends React.Component {
          * if the initial position from props uses the `%` format
          * then return the same format
          */
-        if ( typeof state.left === "string" && state.left.slice( -1 ) === "%" ) {
-            newState.left = ( newState.left / parentNode.clientWidth ) * 100 + "%";
+        if ( typeof state.left === 'string' && state.left.slice( -1 ) === '%' ) {
+            newState.left = ( newState.left / parentNode.clientWidth ) * 100 + '%';
         }
-        if ( typeof state.top === "string" && state.top.slice( -1 ) === "%" ) {
-            newState.top = ( newState.top / parentNode.clientHeight ) * 100 + "%";
+        if ( typeof state.top === 'string' && state.top.slice( -1 ) === '%' ) {
+            newState.top = ( newState.top / parentNode.clientHeight ) * 100 + '%';
         }
 
         this.setState( newState, function(){
@@ -94,8 +94,8 @@ class Draggable extends React.Component {
     }
     
     _handleDragEnd( e ) {
-        window.removeEventListener( "mousemove", this._bindHandleDrag, false );
-        window.removeEventListener( "mouseup", this._bindHandleEnd, false );
+        window.removeEventListener( 'mousemove', this._bindHandleDrag, false );
+        window.removeEventListener( 'mouseup', this._bindHandleEnd, false );
 
         this.setState({
             dragging: false
@@ -127,8 +127,8 @@ class Draggable extends React.Component {
     }
 
     componentWillUnmount() {
-        window.removeEventListener( "mousemove", this._bindHandleDrag, false );
-        window.removeEventListener( "mouseup", this._bindHandleEnd, false );
+        window.removeEventListener( 'mousemove', this._bindHandleDrag, false );
+        window.removeEventListener( 'mouseup', this._bindHandleEnd, false );
     }
 
     render() {
@@ -141,7 +141,7 @@ class Draggable extends React.Component {
 
         var props = {
             style: style,
-            className: "draggable",
+            className: 'draggable',
             onMouseDown: this._handleDragStart.bind( this ),
             onMouseUp: this._handleDragEnd.bind( this )
         };
@@ -162,7 +162,7 @@ Draggable.defaultProps = {
     onDragStart: emptyFunction,
     onDrag: emptyFunction,
     onDragEnd: emptyFunction,
-    axis: "both",
+    axis: 'both',
     start: {}
 };
 

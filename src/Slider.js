@@ -17,12 +17,12 @@
  * <Slider max={20} min={1} step={0.5} value={5} onChange={onChange} />
  */
 
-"use strict";
+'use strict';
 
-var React = require( "react" );
-var mergeAndPrefix = require( "./functions/mergeAndPrefix" );
-var hexToRgb = require( "./functions/hexToRgb" );
-var Draggable = require( "./Draggable" );
+var React = require( 'react' );
+var mergeAndPrefix = require( './functions/mergeAndPrefix' );
+var hexToRgb = require( './functions/hexToRgb' );
+var Draggable = require( './Draggable' );
 
 class Slider extends React.Component {
     constructor( props ) {
@@ -48,52 +48,52 @@ class Slider extends React.Component {
 
         return {
             root: {
-                position: "relative",
-                width: "100%",
+                position: 'relative',
+                width: '100%',
                 height: 24,
-                userSelect: "none",
-                cursor: "pointer"
+                userSelect: 'none',
+                cursor: 'pointer'
             },
             line: {
-                position: "absolute",
-                width: "100%",
+                position: 'absolute',
+                width: '100%',
                 height: 2,
                 left: 0,
                 top: 11,
                 backgroundColor: hexToRgb( props.themeColor, 0.3 ),
-                transition: "all 300ms ease"
+                transition: 'all 300ms ease'
             },
             lineHover: {
                 backgroundColor: hexToRgb( props.themeColor, 0.5 )
             },
             filled: {
-                height: "100%",
+                height: '100%',
                 backgroundColor: hexToRgb( props.themeColor )
             },
             handler: {
-                position: "absolute",
+                position: 'absolute',
                 width: 12,
                 height: 12,
                 top: 6,
-                borderRadius: "50%",
+                borderRadius: '50%',
                 backgroundColor: hexToRgb( props.themeColor ),
-                transform: "translateX(-50%)",
-                cursor: "pointer"
+                transform: 'translateX(-50%)',
+                cursor: 'pointer'
             },
             shadow: {
-                position: "absolute",
+                position: 'absolute',
                 width: 30,
                 height: 30,
-                left: "50%",
-                top: "50%",
-                transform: "translate(-50%, -50%) scale(0)",
+                left: '50%',
+                top: '50%',
+                transform: 'translate(-50%, -50%) scale(0)',
                 backgroundColor: hexToRgb( props.themeColor, 0.2 ),
-                borderRadius: "50%",
+                borderRadius: '50%',
                 opacity: 0,
-                transition: "all 300ms ease"
+                transition: 'all 300ms ease'
             },
             shadowHover: {
-                transform: "translate(-15px, -15px) scale(1)",
+                transform: 'translate(-15px, -15px) scale(1)',
                 opacity: 1
             }
         };
@@ -111,7 +111,7 @@ class Slider extends React.Component {
         });
     };
 
-    //we can accept `{left: "", top: ""}` as the first param while dragging
+    //we can accept `{left: '', top: ''}` as the first param while dragging
     _handleDrag( position ) {
         var props = this.props;
 
@@ -176,7 +176,7 @@ class Slider extends React.Component {
 
         //initial position
         var start = {
-            left: ( state.percent * 100 ) + "%"
+            left: ( state.percent * 100 ) + '%'
         };
 
         var styles = this.getStyle(),
@@ -207,7 +207,7 @@ class Slider extends React.Component {
                     </div>
                 </Draggable>
 
-                <input style={{display: "none"}}
+                <input style={{display: 'none'}}
                        type="range"
                        ref="range"
                        value={state.value}
@@ -232,7 +232,7 @@ Slider.propTypes = {
 };
 
 Slider.defaultProps = {
-    themeColor: "#9dbaef",
+    themeColor: '#9dbaef',
     max: 10,
     min: 0,
     value: 5,

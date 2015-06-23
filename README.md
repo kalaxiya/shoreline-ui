@@ -2,9 +2,9 @@
 
 Shoreline-UI is a set of [React](http://facebook.github.io/react/) components.
 
-At first I choice [Material-UI](https://github.com/callemall/material-ui) for my personal project. It's very very good. It makes all the styles inline and this deeply shocked me. But I found it use the `mixins` that which is not supported in ES6 and it is also a little big to my tiny project. I have just begin to learn React and I like it very much. So I decide to make a set of common components like Material-UI for my project and I hope this can also improve my ability to React. The [Google's Material Design](https://www.google.com/design/spec/material-design/introduction.html) is also very beautiful and I would like to learn it, too.
+At first I choice [Material-UI](https://github.com/callemall/material-ui) for my personal project. It's very very good. It makes all the styles inline and this deeply shocked me. But I found it use the `mixins` that which is not supported in ES6 and it is also a little big to my tiny project. I have just begin to learn React and I like it very much. So I decide to make a set of common components like Material-UI for my project and I hope this can also improve my ability to React. The [Google's Material Design](https://www.google.com/design/spec/material-design/introduction.html) is also very beautiful and I'll add the design style to components.
 
-Shoreline-UI is imperfect currently and I'm making it more better.
+Shoreline-UI is imperfect and I'm making it more better.
 
 ## Installation
 
@@ -20,32 +20,32 @@ You can use shoreline-ui like this:
 
 ```javascript
 
-    var React = require( "./react" ),
-        sui = require( "./shoreline-ui" );
+    var React = require( './react' ),
+        sui = require( './shoreline-ui' );
     
     var DropDown = sui.DropDown,
         Slider = sui.Slider;
     
     class MyApp extends React.component {
         handleDropDownChange( value ) {
-            console.log( "you choice: " + value );
+            console.log( 'you choice: ' + value );
         }
         
         handleSliderChange( value ) {
-            console.log( "current value: " + value );
+            console.log( 'current value: ' + value );
         }
         
         render() {
             var options = [
-                {value: "lin", label: "林"},
-                {value: "ze", label: "泽"},
-                {value: "rui", label: "锐"}
+                {value: 'lin', label: '海'},
+                {value: 'ze', label: '岸'},
+                {value: 'rui', label: '线'}
             ];
             
             return (
                 <div>
                     <DropDown options={options} 
-                              value="lin" 
+                              value='lin' 
                               onChange={this.handleDropDownChange.bind(this)}  />
                               
                     <Slider max={10} 
@@ -78,7 +78,7 @@ That is:
     
 ```
     
-With `themeColor`, components can only receive `hex` value currently. `rgb` and `rgba` will coming soon. :)
+With `themeColor`, components can only receive `hex` and `rgb` currently. Not support `red`, `green` etc.
 
 ## Todo
 

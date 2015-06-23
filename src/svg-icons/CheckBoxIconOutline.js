@@ -6,10 +6,10 @@
  * `CheckBox` 的 `outline`
  */
 
-"use strict";
+'use strict';
 
-var React = require( "react" );
-var SvgIcon = require( "../SvgIcon" );
+var React = require( 'react' );
+var SvgIcon = require( '../SvgIcon' );
 
 class CheckBoxIconOutline extends React.Component {
     render() {

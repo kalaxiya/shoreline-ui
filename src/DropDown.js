@@ -3,6 +3,8 @@
  */
 
 /**
+ * Usage:
+ *
  * var options = [
  *     {value: value0, label: label0},
  *     {value: value1, label: label1},
@@ -14,13 +16,13 @@
  * <DropDown options={options} value="value0" onChange={onChange} />
  */
 
-"use strict";
+'use strict';
 
-var React = require( "react" );
-var Icon = require( "./Icon" );
-var DropDownItem = require( "./DropDownItem" );
-var mergeAndPrefix = require( "./functions/mergeAndPrefix" );
-var hexToRgb = require( "./functions/hexToRgb" );
+var React = require( 'react' );
+var Icon = require( './Icon' );
+var DropDownItem = require( './DropDownItem' );
+var mergeAndPrefix = require( './functions/mergeAndPrefix' );
+var hexToRgb = require( './functions/hexToRgb' );
 
 class DropDown extends React.Component {
     constructor( props ) {
@@ -56,38 +58,38 @@ class DropDown extends React.Component {
 
         return {
             root: {
-                position: "relative",
-                textAlign: "center",
-                display: "inline-block",
+                position: 'relative',
+                textAlign: 'center',
+                display: 'inline-block',
                 height: 30,
                 fontSize: 12,
-                margin: "0 20px"
+                margin: '0 20px'
             },
             handler: {
-                position: "relative",
-                textAlign: "right",
+                position: 'relative',
+                textAlign: 'right',
                 zIndex: 2,
                 height: 29,
-                lineHeight: "29px",
-                borderBottom: "1px solid " + hexToRgb( props.themeColor, 0.5 ),
-                cursor: "pointer"
+                lineHeight: '29px',
+                borderBottom: '1px solid ' + hexToRgb( props.themeColor, 0.5 ),
+                cursor: 'pointer'
             },
             options: {
-                position: "absolute",
+                position: 'absolute',
                 left: 0,
                 top: -5,
-                boxSizing: "border-box",
+                boxSizing: 'border-box',
                 borderRadius: 5,
-                padding: "5px 0",
-                overflow: "hidden"
+                padding: '5px 0',
+                overflow: 'hidden'
             },
             item: {
                 height: 30,
-                boxSizing: "border-box",
-                lineHeight: "30px",
-                listStyle: "none",
-                whiteSpace: "nowrap",
-                cursor: "pointer",
+                boxSizing: 'border-box',
+                lineHeight: '30px',
+                listStyle: 'none',
+                whiteSpace: 'nowrap',
+                cursor: 'pointer',
                 backgroundColor: hexToRgb( props.themeColor )
             }
         };
@@ -144,21 +146,21 @@ class DropDown extends React.Component {
         var rootNode = React.findDOMNode( this ),
             optionsNode = React.findDOMNode( this.refs.options );
 
-        if ( props.style && props.style.hasOwnProperty( "width" ) ) {
-            optionsNode.style.width = "100%";
+        if ( props.style && props.style.hasOwnProperty( 'width' ) ) {
+            optionsNode.style.width = '100%';
             return;
         }
 
-        rootNode.style.width = optionsNode.offsetWidth + "px";
+        rootNode.style.width = optionsNode.offsetWidth + 'px';
     }
 
     componentDidMount() {
-        window.addEventListener( "click", this._bindHandleWindowClick, false );
+        window.addEventListener( 'click', this._bindHandleWindowClick, false );
         this.setWidth();
     }
 
     componentWillUnmount() {
-        window.removeEventListener( "click", this._bindHandleWindowClick, false );
+        window.removeEventListener( 'click', this._bindHandleWindowClick, false );
     }
 
     render() {
@@ -168,24 +170,24 @@ class DropDown extends React.Component {
         var styles = this.getStyle(),
             rootStyle = mergeAndPrefix( styles.root, props.style ),
             handlerStyle = mergeAndPrefix( styles.handler, state.hovered && {
-                    borderBottom: "1px solid " + hexToRgb( props.themeColor, 0.8 )
+                    borderBottom: '1px solid ' + hexToRgb( props.themeColor, 0.8 )
                 }),
             optionsStyle = mergeAndPrefix(
                 styles.options,
                 state.expanded && {
                     zIndex: 3,
-                    boxShadow: "0 3px 10px rgba(0, 0, 0, 0.16), 0 3px 10px rgba(0, 0, 0, 0.23)",
-                    transform: "translate3d(0, -" + 30 * state.selectedIndex  + "px, 0)",
+                    boxShadow: '0 3px 10px rgba(0, 0, 0, 0.16), 0 3px 10px rgba(0, 0, 0, 0.23)',
+                    transform: 'translate3d(0, -' + 30 * state.selectedIndex  + 'px, 0)',
                     backgroundColor: hexToRgb( props.themeColor )
                 },
                 !state.expanded && {
-                    transition: "transform 300ms ease"
+                    transition: 'transform 300ms ease'
                 }),
             itemStyle = mergeAndPrefix(
                 styles.item,
                 !state.expanded && {
-                    backgroundColor: "transparent",
-                    transition: "all 300ms ease"
+                    backgroundColor: 'transparent',
+                    transition: 'all 300ms ease'
                 });
 
         var options = props.options.map(function(v, i){
@@ -193,15 +195,15 @@ class DropDown extends React.Component {
                 <li key={v.value + i}
                     style={mergeAndPrefix(
                         itemStyle,
-                        !state.expanded && i !== state.selectedIndex && {visibility: "hidden", opacity: 0, transitionDuration: "0ms"},
-                        !state.expanded && i === state.selectedIndex && {transform: "translate3d(0, -" + 30 * i +"px, 0)"}
+                        !state.expanded && i !== state.selectedIndex && {visibility: 'hidden', opacity: 0, transitionDuration: '0ms'},
+                        !state.expanded && i === state.selectedIndex && {transform: 'translate3d(0, -' + 30 * i +'px, 0)'}
                         )}
                     >
                     <DropDownItem
                         onMouseOver={this._handleItemHover.bind(this, i)}
                         onClick={this._handleSelect.bind(this, i)}
-                        hoverStyle={state.expanded && i === state.hoverIndex && {backgroundColor: "rgba(255, 255, 255, 0.2)"}}
-                        selectedStyle={state.expanded && i === state.selectedIndex && {color: "#fff"}}
+                        hoverStyle={state.expanded && i === state.hoverIndex && {backgroundColor: 'rgba(255, 255, 255, 0.2)'}}
+                        selectedStyle={state.expanded && i === state.selectedIndex && {color: '#fff'}}
                         >
                         {v.label}
                     </DropDownItem>
@@ -236,11 +238,11 @@ DropDown.propTypes = {
 };
 
 DropDown.defaultProps = {
-    themeColor: "#9dbaef",
+    themeColor: '#9dbaef',
     options: [
-        {value: "item0", label: "label0"},
-        {value: "item1", label: "label1"},
-        {value: "item2", label: "label2"}
+        {value: 'item0', label: 'label0'},
+        {value: 'item1', label: 'label1'},
+        {value: 'item2', label: 'label2'}
     ],
     onChange: function() {}
 };

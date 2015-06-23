@@ -2,10 +2,10 @@
  * Created by linzerui on 15/6/12.
  */
 
-"use strict";
+'use strict';
 
-var Modernizr = require( "../utils/modernizr.custom" );
-var assign = require( "object-assign" );
+var Modernizr = require( '../utils/modernizr.custom' );
+var assign = require( 'object-assign' );
 
 module.exports = function() {
     //merge

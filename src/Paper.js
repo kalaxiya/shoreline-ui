@@ -8,11 +8,11 @@
  * <Paper radius={20} />
  */
 
-"use strict";
+'use strict';
 
-var React = require( "react" );
-var mergeAndPrefix = require( "./functions/mergeAndPrefix" );
-var hexToRgb = require( "./functions/hexToRgb" );
+var React = require( 'react' );
+var mergeAndPrefix = require( './functions/mergeAndPrefix' );
+var hexToRgb = require( './functions/hexToRgb' );
 
 class Paper extends React.Component {
     getStyle() {
@@ -20,21 +20,21 @@ class Paper extends React.Component {
 
         return {
             backgroundColor: hexToRgb( props.themeColor ),
-            transition: props.transitionEnabled && "all 300ms ease",
-            boxSizing: "border-box",
+            transition: props.transitionEnabled && 'all 300ms ease',
+            boxSizing: 'border-box',
             boxShadow: this.getShadow( props.zDepth ),
-            borderRadius: props.circle ? "50%" : props.radius
+            borderRadius: props.circle ? '50%' : props.radius
         }
     };
 
     getShadow( zDepth ) {
         var shadows = [
             '',
-            '0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24)',
-            '0 3px 10px rgba(0, 0, 0, 0.16), 0 3px 10px rgba(0, 0, 0, 0.23)',
-            '0 10px 30px rgba(0, 0, 0, 0.19), 0 6px 10px rgba(0, 0, 0, 0.23)',
-            '0 14px 45px rgba(0, 0, 0, 0.25), 0 10px 18px rgba(0, 0, 0, 0.22)',
-            '0 19px 60px rgba(0, 0, 0, 0.30), 0 15px 20px rgba(0, 0, 0, 0.22)'
+            '0 1px 6px rgba(0, 0, 0, 0.1), 0 1px 4px rgba(0, 0, 0, 0.25)',
+            '0 3px 10px rgba(0, 0, 0, 0.15), 0 3px 10px rgba(0, 0, 0, 0.25)',
+            '0 10px 30px rgba(0, 0, 0, 0.2), 0 6px 10px rgba(0, 0, 0, 0.25)',
+            '0 14px 45px rgba(0, 0, 0, 0.25), 0 10px 18px rgba(0, 0, 0, 0.25)',
+            '0 19px 60px rgba(0, 0, 0, 0.30), 0 15px 20px rgba(0, 0, 0, 0.25)'
         ];
 
         return shadows[ zDepth ];
@@ -63,7 +63,7 @@ Paper.propTypes = {
 };
 
 Paper.defaultProps = {
-    themeColor: "#9dbaef",
+    themeColor: '#9dbaef',
     circle: false,
     radius: 3,
     zDepth: 1,

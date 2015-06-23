@@ -2,10 +2,10 @@
  * Created by linzerui on 15/6/16.
  */
 
-"use strict";
+'use strict';
 
-var React = require( "react" );
-var SvgIcon = require( "../SvgIcon" );
+var React = require( 'react' );
+var SvgIcon = require( '../SvgIcon' );
 
 class RadioButtonOn extends React.Component {
     render() {

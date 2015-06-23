@@ -10,29 +10,29 @@
 
 'use strict';
 
-var React = require( "react" );
-var mergeAndPrefix = require( "./functions/mergeAndPrefix" );
-var hexToRgb = require( "./functions/hexToRgb" );
+var React = require( 'react' );
+var mergeAndPrefix = require( './functions/mergeAndPrefix' );
+var hexToRgb = require( './functions/hexToRgb' );
 
 class Icon extends React.Component {
     getStyle() {
         return {
             fontSize: this.props.size,
-            fontFamily: "Material Icons",
-            fontWeight: "normal",
-            fontStyle: "normal",
-            display: "inline-block",
-            verticalAlign: "middle",
-            width: "1em",
-            height: "1em",
+            fontFamily: 'Material Icons',
+            fontWeight: 'normal',
+            fontStyle: 'normal',
+            display: 'inline-block',
+            verticalAlign: 'middle',
+            width: '1em',
+            height: '1em',
             lineHeight: 1,
-            textTransform: "none",
-            letterSpacing: "normal",
-            wordWrap: "normal",
-            WebkitFontSmoothing: "antialiased",
-            textRendering: "optimizeLegibility",
-            MozOsxFontSmoothing: "grayscale",
-            fontFeatureSettings: "liga"
+            textTransform: 'none',
+            letterSpacing: 'normal',
+            wordWrap: 'normal',
+            WebkitFontSmoothing: 'antialiased',
+            textRendering: 'optimizeLegibility',
+            MozOsxFontSmoothing: 'grayscale',
+            fontFeatureSettings: 'liga'
         };
     }
 
@@ -67,9 +67,9 @@ Icon.propTypes = {
 };
 
 Icon.defaultProps = {
-    icon: "face",
+    icon: 'face',
     size: 18,
-    themeColor: "#9dbaef",
+    themeColor: '#9dbaef',
     disabled: false
 };
 

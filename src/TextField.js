@@ -16,11 +16,11 @@
  * <TextField multiLine={false} placeholder="Your Name" floatLabel="Label Text" onChange={onChange} />
  */
 
-"use strict";
+'use strict';
 
-var React = require( "react" );
-var mergeAndPrefix = require( "./functions/mergeAndPrefix" );
-var hexToRgb = require( "./functions/hexToRgb" );
+var React = require( 'react' );
+var mergeAndPrefix = require( './functions/mergeAndPrefix' );
+var hexToRgb = require( './functions/hexToRgb' );
 
 class TextField extends React.Component {
     constructor( props ) {
@@ -38,88 +38,88 @@ class TextField extends React.Component {
             root: {
                 fontSize: 14,
                 height: 48,
-                lineHeight: "24px",
-                display: "inline-block",
-                position: "relative",
-                transition: "height 300ms ease"
+                lineHeight: '24px',
+                display: 'inline-block',
+                position: 'relative',
+                transition: 'height 300ms ease'
             },
             textInput: {
-                position: "relative",
-                width: "100%",
-                height: "100%",
+                position: 'relative',
+                width: '100%',
+                height: '100%',
                 padding: 0,
-                border: "none",
-                outline: "none",
-                backgroundColor: "transparent",
-                color: "#000",
-                font: "inherit"
+                border: 'none',
+                outline: 'none',
+                backgroundColor: 'transparent',
+                color: '#000',
+                font: 'inherit'
             },
             textAreaWrap: {
-                position: "relative",
-                width: "100%",
-                height: "100%",
-                font: "inherit"
+                position: 'relative',
+                width: '100%',
+                height: '100%',
+                font: 'inherit'
             },
             shadow: {
-                position: "absolute",
+                position: 'absolute',
                 opacity: 0,
-                width: "100%",
-                overflow: "hidden",
-                resize: "none",
-                font: "inherit",
-                border: "none"
+                width: '100%',
+                overflow: 'hidden',
+                resize: 'none',
+                font: 'inherit',
+                border: 'none'
             },
             textArea: {
-                position: "relative",
-                color: "#000",
-                width: "100%",
-                resize: "none",
+                position: 'relative',
+                color: '#000',
+                width: '100%',
+                resize: 'none',
                 padding: 0,
                 marginTop: 12,
-                boxSizing: "border-box",
-                border: "none",
-                outline: "none",
-                backgroundColor: "transparent",
-                overflow: "hidden",
-                font: "inherit"
+                boxSizing: 'border-box',
+                border: 'none',
+                outline: 'none',
+                backgroundColor: 'transparent',
+                overflow: 'hidden',
+                font: 'inherit'
             },
             placeholder: {
-                position: "absolute",
-                lineHeight: "48px",
+                position: 'absolute',
+                lineHeight: '48px',
                 opacity: 0.2,
-                transition: "all 300ms ease",
-                color: "#000"
+                transition: 'all 300ms ease',
+                color: '#000'
             },
             floatLabel: {
-                position: "absolute",
-                lineHeight: "48px",
+                position: 'absolute',
+                lineHeight: '48px',
                 opacity: 0.2,
-                transition: "all 300ms ease",
-                color: "#000",
-                transform: "scale(1) translate3d(0, 0, 0)",
-                transformOrigin: "left top 0"
+                transition: 'all 300ms ease',
+                color: '#000',
+                transform: 'scale(1) translate3d(0, 0, 0)',
+                transformOrigin: 'left top 0'
             },
             hr: {
-                position: "absolute",
-                width: "100%",
+                position: 'absolute',
+                width: '100%',
                 height: 1,
-                border: "none",
+                border: 'none',
                 lineHeight: 0,
-                backgroundColor: "rgb(0, 0, 0)",
+                backgroundColor: 'rgb(0, 0, 0)',
                 opacity: 0.3,
                 left: 0,
                 bottom: 8,
                 margin: 0
             },
             focusHr: {
-                position: "absolute",
-                width: "100%",
+                position: 'absolute',
+                width: '100%',
                 height: 2,
-                border: "none",
+                border: 'none',
                 lineHeight: 0,
                 backgroundColor: hexToRgb( props.themeColor ),
-                transform: "scaleX(0)",
-                transition: "all 300ms ease",
+                transform: 'scaleX(0)',
+                transition: 'all 300ms ease',
                 left: 0,
                 bottom: 8,
                 margin: 0
@@ -140,10 +140,10 @@ class TextField extends React.Component {
                 shadow.value = e.target.value;
             }
 
-            React.findDOMNode( this ).style.height = ( +shadow.scrollHeight + 24 ) + "px";
+            React.findDOMNode( this ).style.height = ( +shadow.scrollHeight + 24 ) + 'px';
         }
 
-        if ( typeof props.onChange === "function" ) {
+        if ( typeof props.onChange === 'function' ) {
             props.onChange( e.target.value );
         }
     }
@@ -171,7 +171,7 @@ class TextField extends React.Component {
             shadow.value = newValue;
         }
 
-        React.findDOMNode( this ).style.height = ( +shadow.scrollHeight + 24 ) + "px";
+        React.findDOMNode( this ).style.height = ( +shadow.scrollHeight + 24 ) + 'px';
     }
 
     getValue() {
@@ -205,12 +205,12 @@ class TextField extends React.Component {
             floatLabelStyle = mergeAndPrefix(
                 styles.floatLabel,
                 state.value && {
-                    transform: "perspective(1px) scale(0.75) translate3d(0px, -18px, 0px)",
-                    color: "#000",
+                    transform: 'perspective(1px) scale(0.75) translate3d(0px, -18px, 0px)',
+                    color: '#000',
                     opacity: 0.2
                 },
                 state.focus && !state.value && {
-                    transform: "perspective(1px) scale(0.75) translate3d(0px, -18px, 0px)",
+                    transform: 'perspective(1px) scale(0.75) translate3d(0px, -18px, 0px)',
                     color: hexToRgb( props.themeColor ),
                     opacity: 1
                 }
@@ -247,7 +247,7 @@ class TextField extends React.Component {
             focusHrStyle = mergeAndPrefix(
                 styles.focusHr,
                 state.focus && {
-                    transform: "scaleX(1)"
+                    transform: 'scaleX(1)'
                 }
             );
 
@@ -264,7 +264,7 @@ class TextField extends React.Component {
                         >
                     </textarea>
 
-                    <textarea style={mergeAndPrefix( textAreaStyle, {height: "100%"} )}
+                    <textarea style={mergeAndPrefix( textAreaStyle, {height: '100%'} )}
                               value={state.value}
                               ref="textArea"
                               onChange={this._handleChange.bind(this)}
@@ -317,10 +317,10 @@ TextField.propTypes = {
 };
 
 TextField.defaultProps = {
-    themeColor: "#9dbaef",
+    themeColor: '#9dbaef',
     multiLine: false,
-    placeholder: "You should always set a placeholder",
-    floatLabel: "Label Text"
+    placeholder: 'You should always set a placeholder',
+    floatLabel: 'Label Text'
 };
 
 module.exports = TextField;

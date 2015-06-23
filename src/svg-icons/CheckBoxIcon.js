@@ -6,10 +6,10 @@
  * `CheckBox` 选中时的 `icon`
  */
 
-"use strict";
+'use strict';
 
-var React = require( "react" );
-var SvgIcon = require( "../SvgIcon" );
+var React = require( 'react' );
+var SvgIcon = require( '../SvgIcon' );
 
 class CheckBoxIcon extends React.Component {
     render() {

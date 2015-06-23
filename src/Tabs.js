@@ -5,7 +5,7 @@
 /**
  * Usage:
  *
- * var labels = ["one", "two", "three"];
+ * var labels = ['one', 'two', 'three'];
  *
  * var a = <div>content</div>,
  *     b = <p>content</p>,
@@ -18,11 +18,11 @@
  * <Tabs labels={labels} items={items} onChange={onChange} />
  */
 
-"use strict";
+'use strict';
 
-var React = require( "react" );
-var mergeAndPrefix = require( "./functions/mergeAndPrefix" );
-var hexToRgb = require( "./functions/hexToRgb" );
+var React = require( 'react' );
+var mergeAndPrefix = require( './functions/mergeAndPrefix' );
+var hexToRgb = require( './functions/hexToRgb' );
 
 class Tabs extends React.Component {
     constructor( props ) {
@@ -41,44 +41,44 @@ class Tabs extends React.Component {
     getStyle() {
         return {
             root: {
-                width: "100%"
+                width: '100%'
             },
             labelWrap: {
-                position: "relative",
+                position: 'relative',
                 backgroundColor: hexToRgb( this.props.themeColor )
             },
             labelList: {
-                display: "table",
-                position: "relative",
+                display: 'table',
+                position: 'relative',
                 margin: 0,
                 padding: 0,
-                width: "100%",
-                whiteSpace: "nowrap",
+                width: '100%',
+                whiteSpace: 'nowrap',
                 zIndex: 2
             },
             label: {
-                display: "table-cell",
-                cursor: "pointer",
-                textAlign: "center",
-                verticalAlign: "middle",
+                display: 'table-cell',
+                cursor: 'pointer',
+                textAlign: 'center',
+                verticalAlign: 'middle',
                 height: 45,
-                color: "#fff",
+                color: '#fff',
                 opacity: 0.6,
                 fontSize: 14,
-                boxSizing: "border-box"
+                boxSizing: 'border-box'
             },
             item: {
-                position: "relative",
-                display: "none"
+                position: 'relative',
+                display: 'none'
             },
             flag: {
-                position: "absolute",
-                backgroundColor: "rgba(0, 0, 0, 0.3)",
+                position: 'absolute',
+                backgroundColor: 'rgba(0, 0, 0, 0.3)',
                 height: 2,
                 left: 0,
                 bottom: 0,
                 zIndex: 1,
-                transition: "all 300ms ease"
+                transition: 'all 300ms ease'
             }
         };
     }
@@ -121,14 +121,14 @@ class Tabs extends React.Component {
         }
 
         //distribution the width
-        var width = 100 / labels.length + "%";
+        var width = 100 / labels.length + '%';
 
         labelStyle = mergeAndPrefix( labelStyle, {
             width: width
         });
         flagStyle = mergeAndPrefix( flagStyle, {
             width: width,
-            transform: "translate3d(" + 100 * state.selectedIndex + "%, 0, 0)"
+            transform: 'translate3d(' + 100 * state.selectedIndex + '%, 0, 0)'
         });
 
 
@@ -145,7 +145,7 @@ class Tabs extends React.Component {
             itemList = items.map(function(v, i){
                 return (
                     <div key={i}
-                         style={mergeAndPrefix( itemStyle, i === state.selectedIndex && {display: "block"} )}>
+                         style={mergeAndPrefix( itemStyle, i === state.selectedIndex && {display: 'block'} )}>
                         {v}
                     </div>
                 )
@@ -182,10 +182,10 @@ Tabs.propTypes = {
 };
 
 Tabs.defaultProps = {
-    themeColor: "#9dbaef",
-    labels: ["label one", "label two"],
+    themeColor: '#9dbaef',
+    labels: ['label one', 'label two'],
     items: [<div>item one</div>, <div>item two</div>],
-    position: "top",
+    position: 'top',
     selectedIndex: 0,
     onChange: function() {}
 };
