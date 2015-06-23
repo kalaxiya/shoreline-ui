@@ -1,7 +1,7 @@
 # Site settings
-title: LIN.
+title: Shoreline UI.
 email: pigsrule@qq.com
-description: my github page.
+description: React components.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://linzerui.github.com" # the base hostname & protocol for your site
 github_username:  linzerui
