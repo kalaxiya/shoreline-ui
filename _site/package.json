@@ -1,0 +1,11 @@
+{
+  "name": "app",
+  "version": "0.0.1",
+  "dependencies": {
+    "react": "^0.13.3"
+  },
+  "devDependencies": {
+    "jsx-loader": "^0.13.2",
+    "object-assign": "^3.0.0"
+  }
+}
