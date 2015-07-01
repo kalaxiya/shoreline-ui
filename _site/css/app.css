@@ -1,11 +1,152 @@
+@charset "UTF-8";
+@font-face {
+  font-family: infinity;
+  font-style: normal;
+  src: url(../font/Infinity.ttf) format("truetype"); }
+* {
+  margin: 0;
+  padding: 0; }
+
 html {
   height: 100%;
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Hiragino Sans GB','Microsoft YaHei','微软雅黑', Helvetica,Arial, sans-serif;
+  font-size: 12px; }
 
 body {
-  margin: 0;
   height: 100%;
   background: -webkit-linear-gradient(right top, #8ad0fd, #03446e);
   background: -moz-linear-gradient(right top, #8ad0fd, #03446e);
   color: #fff;
   -webkit-font-smoothing: antialiased; }
+
+a {
+  text-decoration: none;
+  color: #fff; }
+
+li {
+  list-style-type: none; }
+
+h1, h2, h3 {
+  font-size: 100%; }
+
+.content, .nav, .ctrl span {
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease; }
+
+.content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto; }
+
+.content .inner {
+  width: 60%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 100px 0; }
+
+.ctrl {
+  position: fixed;
+  width: 25px;
+  left: 5%;
+  top: 30px;
+  z-index: 3; }
+
+.ctrl span {
+  display: block;
+  height: 1px;
+  background-color: #fff;
+  margin-bottom: 8px; }
+
+.nav {
+  position: fixed;
+  max-width: 15%;
+  min-width: 120px;
+  height: 100%;
+  padding: 0 5%;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translate3d(-100px, 0, 0);
+  transform: translate3d(-100px, 0, 0); }
+
+.nav {
+  padding-top: 100px;
+  font-size: 14px;
+  text-align: left; }
+
+.nav a {
+  display: block;
+  margin-bottom: 20px; }
+
+.nav h1 {
+  font-size: 16px; }
+
+.shoreline .content {
+  -webkit-transform: translate3d(10%, 0, 0);
+  transform: translate3d(10%, 0, 0); }
+
+.shoreline .nav {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.shoreline .ctrl span:nth-child(1) {
+  -webkit-transform: translate3d(0, 9px, 0) rotate(45deg);
+  transform: translate3d(0, 9px, 0) rotate(45deg); }
+
+.shoreline .ctrl span:nth-child(2) {
+  opacity: 0; }
+
+.shoreline .ctrl span:nth-child(3) {
+  -webkit-transform: translate3d(0, -9px, 0) rotate(-45deg);
+  transform: translate3d(0, -9px, 0) rotate(-45deg); }
+
+.kd, .k {
+  color: #c81333; }
+
+.nx {
+  color: maroon; }
+
+.nb {
+  color: midnightblue; }
+
+.c1, .cm {
+  color: saddlebrown; }
+
+.s2, .p {
+  color: #805656; }
+
+.kc {
+  color: mediumvioletred; }
+
+.mi {
+  color: darkcyan; }
+
+.sr {
+  color: steelblue; }
+
+.nc, .nt {
+  color: maroon; }
+
+.sx, .m {
+  color: dimgray; }
+
+.c {
+  color: slategray; }
+
+.na {
+  color: sienna; }
+
+.s {
+  color: midnightblue; }
+
+.cp {
+  color: seashell; }

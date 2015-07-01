@@ -2,7 +2,7 @@
  * Created by linzerui on 15/6/23.
  */
 module.exports = {
-    entry: './js/entry.js',
+    entry: './src/entry.js',
     output: {
         path: __dirname,
         filename: './build/app.js'

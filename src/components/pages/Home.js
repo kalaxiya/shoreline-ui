@@ -4,8 +4,8 @@
 
 'use strict';
 
-var React = require( 'react' );
-var Router = require( 'react-router' );
+var React = require('react');
+var Router = require('react-router');
 var Link = Router.Link;
 
 class Home extends React.Component {
@@ -19,14 +19,16 @@ class Home extends React.Component {
                 textAlign: 'center',
                 position: 'absolute',
                 width: '100%',
+                left: '50%',
                 top: '50%',
-                transform: 'translateY(-50%)'
+                transform: 'translate(-50%, -50%)'
             },
             h1: {
                 margin: 0,
                 padding: '0 0 30px 0',
                 fontWeight: 'normal',
-                fontSize: 56
+                fontSize: 56,
+                fontFamily: 'monaco'
             }
         }
     }
@@ -35,10 +37,12 @@ class Home extends React.Component {
         var styles = this.getStyle();
 
         return (
-            <div style={styles.root}>
+            <div style={styles.root} className="home">
                 <div style={styles.main}>
                     <h1 style={styles.h1}>Shoreline UI</h1>
-                    
+                    <Link to="get-started">Get Started</Link>
+                    <Link to="components">Demo</Link>
+                    <a href="https://github.com/linzerui/shoreline-ui" target="_blank">Github</a>
                 </div>
             </div>
         )
