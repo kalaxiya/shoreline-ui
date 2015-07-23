@@ -2,7 +2,7 @@
 
 Shoreline-UI is a set of [React](http://facebook.github.io/react/) components.
 
-At first I choice [Material-UI](https://github.com/callemall/material-ui) for my personal project. It's very very good. It makes all the styles inline and this deeply shocked me. But I found it use the `mixins` that which is not supported in ES6 and it is also a little big to my tiny project. I have just begin to learn React and I like it very much. So I decide to make a set of common components like Material-UI for my project. The [Google's Material Design](https://www.google.com/design/spec/material-design/introduction.html) is also very beautiful and I'll add the design style to components.
+At first I chose [Material-UI](https://github.com/callemall/material-ui) for my personal project. It's very very good. It makes all the styles inline and this deeply shocked me. But I found it use the `mixins` that which is not supported in ES6 and it is also a little big to my tiny project. I have just begin to learn React and I like it very much. So I decide to make a set of common components like Material-UI for my project. The [Google's Material Design](https://www.google.com/design/spec/material-design/introduction.html) is also very beautiful and I'll add the design style to components.
 
 Shoreline-UI is imperfect and I'm making it more better.
 
